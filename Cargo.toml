@@ -1,0 +1,8 @@
+[package]
+name = "systemd-networkd-wait-online-any"
+version = "0.1.0"
+authors = ["Matt Coffin <mcoffin@qw-corp.com>"]
+edition = "2018"
+
+[dependencies]
+getopts = "0.2"
