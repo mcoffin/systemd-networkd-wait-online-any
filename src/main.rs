@@ -45,6 +45,8 @@ fn real_main() -> i32 {
         ignore_interfaces.push("lo".to_string());
     }
     let (tx, rx) = sync::mpsc::channel();
+    let interfaces = interfaces.into_iter()
+        .filter(|iface| ignore_interfaces.contains(iface));
     for iface in interfaces {
         let tx = tx.clone();
         thread::spawn(move || {
